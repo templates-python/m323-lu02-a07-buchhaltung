@@ -1,0 +1,14 @@
+[
+  {
+    "name": "test_add_transaction",
+    "function": "test_add_transaction",
+    "timeout": 10,
+    "points": 1
+  },
+  {
+    "name": "test_calculate_balance",
+    "function": "test_calculate_balance",
+    "timeout": 10,
+    "points": 1
+  }
+]
