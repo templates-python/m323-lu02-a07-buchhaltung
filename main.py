@@ -1,3 +1,8 @@
+"""Buchhaltung.
+
+Aufgabenstellung: https://wiki.bzz.ch/modul/m323/learningunits/lu02/aufgaben/buchhaltung
+"""
+
 def add_transaction(transactions, new_transaction):
     """
     Adds a new transaction to the existing list of transactions.
@@ -24,21 +29,21 @@ def calculate_balance(transactions):
     """
     balance = 0
     for transaction in transactions:
-        type, amount = transaction
-        if type == 'Deposit':
+        transaction_type, amount = transaction
+        if transaction_type == 'Deposit':
             balance += amount
-        elif type == 'Withdrawal':
+        elif transaction_type == 'Withdrawal':
             balance -= amount
     return balance
 
 
 if __name__ == '__main__':
     # Beispiel für die Datenstruktur der Transaktionen
-    transactions = (('Deposit', 1000), ('Withdrawal', 200))
+    demo_transactions = (('Deposit', 1000), ('Withdrawal', 200))
     # Füge eine neue Transaktion hinzu
-    transactions = add_transaction(transactions, ('Deposit', 500))
-    transactions = add_transaction(transactions, ('Withdrawal', 100))
-    transactions = add_transaction(transactions, ('Deposit', 300))
+    demo_transactions = add_transaction(demo_transactions, ('Deposit', 500))
+    demo_transactions = add_transaction(demo_transactions, ('Withdrawal', 100))
+    demo_transactions = add_transaction(demo_transactions, ('Deposit', 300))
     # Berechne den aktuellen Kontostand
-    balance = calculate_balance(transactions)
-    print(f'Transaktionen: {transactions}, Kontostand {balance}')
+    demo_balance = calculate_balance(demo_transactions)
+    print(f'Transaktionen: {demo_transactions}, Kontostand {demo_balance}')
